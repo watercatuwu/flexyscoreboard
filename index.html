@@ -1,0 +1,100 @@
+<head>
+<link rel="stylesheet" href="baseball.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<section id="boxes">
+    <div class="container containerbaseball">
+        <div class="box boxhometeam" id="team_1">Home</div>
+        <div class="box boxhomepoints" id="points_1">0</div>
+        <div class="box boxawaypoints" id="points_2">0</div>
+        <div class="box boxawayteam" id="team_2">Away</div>
+    
+    <div class="containergamedata">
+        <div class="box boxservice boxhomeservice">
+          <span id="homeservice" class="okservice">
+          <svg class="triangleup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 7">
+          </svg>
+          </span>
+        </div>
+        <div class="box containerinnings">
+        <div class="box boxinnings" id="innings">1</div>
+        <div class="box boxinningslabel">Inn</div>
+    </div>
+    <div class="box boxservice boxawayservice">
+          <span id="awayservice" class="noservice">
+          <svg class="triangledown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 7">
+          </svg>
+          </span>
+        </div>
+    </div>
+
+        <div class="containerlastrow">
+          <div class="sgrlogo" style="background: url(https://www.live.flexyscore.net/logofs.svg) no-repeat center;"></div>
+          <div class="box containerboxstrikes">
+          <span class="box boxballs" id="balls">0</span>
+          <span class="box boxballsstrikesseparator">-</span>
+          <span class="box boxstrikes" id="strikes">0</span>
+        </div>
+
+        <div class="box containerouts">
+          <div class="box boxouts" id="outs">0</div>
+          <div class="box boxouts boxoutslabel">Out</div>
+        </div>
+
+        <div class="box containerbases">
+          <div class="box boxbases boxbasesoff" id="b1"></div>
+          <div class="box boxbases boxbasesoff" id="b2"></div>
+          <div class="box boxbases boxbasesoff" id="b3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container w3-container w3-xlarge w3-padding-64">
+    <div class="w3-row">
+      <div class="w3-half">
+        <p class="w3-section" style="background: #333;
+            color: #ccc;text-align: center;">Control</p>
+        <div class="w3-margin">
+          <button id="homeplus" class="w3-button w3-black w3-hover-white w3-margin-top">Home+</button>
+          <button id="homeminus" class="w3-button w3-black w3-hover-white w3-margin-top">Home-</button>
+          <button id="awayplus" class="w3-button w3-black w3-hover-white w3-margin-top">Away+</button>
+          <button id="awayminus" class="w3-button w3-black w3-hover-white w3-margin-top">Away-</button>
+        </div>
+        <div class="w3-margin">
+          <button id="strikesbt" class="w3-button w3-black w3-hover-white w3-margin-top">Strikes</button>
+          <button id="ballsbt" class="w3-button w3-black w3-hover-white w3-margin-top">Balls</button>
+          <button id="outsbt" class="w3-button w3-black w3-hover-white w3-margin-top">Out</button>
+        </div>
+        <div class="w3-margin">
+          <button id="innplus" class="w3-button w3-black w3-hover-white w3-margin-top">Inn+</button>
+          <button id="innminus" class="w3-button w3-black w3-hover-white w3-margin-top">Inn-</button>
+        </div>
+      </div>
+      <div class="w3-half">
+        <p class="w3-section" style="background: #333;
+            color: #ccc;text-align: center; border-left: 1px solid #ccc;">Name set</p>
+        <div class="w3-container">
+          <div class="w3-row">
+            <p><label>Away</label>
+            <input id="awayname" class="w3-input" type="text">
+            </p>
+            <p><label>Home</label>
+            <input id="homename" class="w3-input" type="text">
+            </p>
+            <button id="send" class="w3-button w3-black w3-hover-white w3-margin-top">Send</button>
+          </div>
+          <div class="w3-row w3-margin-top">
+            <p class="w3-margin-bottom" style="background: #333;
+            color: #ccc;text-align: center;">Base set</p>
+            <button id="base1" class="w3-button w3-black w3-hover-yellow">First</button>
+            <button id="base2" class="w3-button w3-black w3-hover-yellow">Second</button>
+            <button id="base3" class="w3-button w3-black w3-hover-yellow">Third</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>

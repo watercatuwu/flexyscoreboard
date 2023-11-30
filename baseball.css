@@ -1,0 +1,72 @@
+/* template baseball*/
+@import url('schema.css');
+
+
+/* repeat(5, 20vw) */
+
+.containerbaseball {box-sizing: content-box; font-size: 10vw;}
+.containerbaseball .sgrlogo {background-size: auto 70% !important; background-color: var(--white) !important;}
+
+
+
+
+/* posizione blocchi */
+.containerbaseball {grid-template: repeat(3, auto) / auto 20vw 20vw;}
+
+
+.boxawayteam {grid-row:1/2;}
+.boxhometeam {grid-row:2/3;}
+.boxhomepoints {grid-column: 2/3; grid-row: 2/3;}
+.boxawaypoints {grid-column: 2/3; grid-row: 1/2;}
+.containergamedata {grid-column: auto/-1; grid-row: 1/3;}
+.containerlastrow {grid-column: 1/-1; grid-row: auto/-1;}
+.containerlastrow {display: grid; grid-template: auto / 30vw 25vw 25vw 20vw;}
+
+
+/* colori */
+.containergamedata {background: var(--bkg);}
+.containerboxstrikes, .containerouts {background: var(--bkg); border-right: solid 1px var(--linee);}
+.containerbases {background: var(--bkg);}
+.containerbases .boxon {background: var(--red);}
+.containerbases .boxbasesoff {background: var(--bkggrey);}
+
+
+/* elementi */
+.boxawayteam, .boxhometeam {display: flex; align-items: center; justify-content: flex-start !important; text-align: left; padding-left: 2vw;}
+.box {display: flex; align-items: center; justify-content: center;}
+.boxinnings {justify-content: flex-end;}
+.boxinningslabel {justify-content: flex-start;}
+.boxawayteam, .boxawaypoints {border-bottom: solid 1px var(--linee);}
+
+.containergamedata {display: grid; grid-template: 30% 40% 30% / 100%; }
+.boxservice {position: relative;}
+.okservice, .noservice {align-items: center;}
+
+
+
+/* ----------- TRIANGOLOZZI (uso lo span) -------*/
+.boxservice {position: relative;}
+.boxservice span {position: absolute; width: 100%; height: 100%;}
+.boxhomeservice span {clip-path: polygon(50% 10%, 25% 100%, 75% 100%);}
+.boxawayservice span {clip-path: polygon(50% 90%, 25% 0%, 75% 0%);}
+
+.okservice {background: var(--yellow);}
+.noservice {background: var(--bkggrey);}
+
+
+.containerlastrow {font-size: 7vw; border-top: solid 1px var(--linee); min-height: 12vw;} 
+.containerlastrow .box {align-items: center;}
+.containerboxstrikes {display: flex; flex-flow: row nowrap; justify-content: center;}
+.containerouts {display: flex; flex-flow: row nowrap; justify-content: center;}
+.containerouts .boxouts {margin-right: 8%;}
+.containerinnings {display: flex; flex-flow: row nowrap; justify-content: center; align-items: center;font-size: 7vw;}
+.containerinnings .box {} 
+.containerinnings .boxinnings {width: 45%; text-align: right;}
+.containerinnings .boxinningslabel {width: 55%; padding-left: 1vw; text-align: left;}
+
+
+.containerbases {position: relative;}
+.boxbases {position: absolute; width: 4vw; height: 4vw;}
+.boxbases:nth-child(1) {left: 50%; bottom: 2vw; transform: translateX(40%) rotate(45deg);}
+.boxbases:nth-child(2) {left: 50%; top: 2vw; transform: translateX(-50%) rotate(45deg);}
+.boxbases:nth-child(3) {left: 50%; bottom: 2vw; transform: translateX(-140%) rotate(45deg);}

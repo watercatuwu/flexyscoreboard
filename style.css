@@ -1,0 +1,88 @@
+/* INSTRUCTION and example for customize BASEBALL scoreboard:
+Each element has one or more classes, so you can control one or more elements at the same time.
+On the left you can read every single element with his class 
+
+This template is pretty complex, we have a grid with 11 elements pay attention when making variations */
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+
+.box {
+    background: #333;
+    color: #ccc;
+  }
+  
+  .boxhomepoints, .boxawaypoints {background:#666;}
+  
+  .okservice svg {
+    fill:#ffd300;
+  }
+  .containerbaseball .boxon {
+    background:#ffd300;
+  }
+  .boxinnings, .boxinningslabel {
+    color: red;
+  }
+  
+  .boxhometeam, .boxawayteam {
+    position:relative;
+    padding-left: 12vw;
+  }
+  .boxhometeam:before, .boxawayteam:before {
+    content:""; 
+    display:block;
+    position: absolute;
+    width: 10vw;
+    height:100%;
+    top:0;
+    left:0;
+  }
+  
+  .boxhometeam:before {
+    background: url(./icon/home.svg) no-repeat center;
+    background-size: 95%
+  }
+  .boxawayteam:before {
+    background: url(./icon/away.svg) no-repeat center;
+    background-size: 95%
+  }
+  
+  /*-------------------------------------------------------------------
+  ---- UNDER: background color and little adjustments. PLEASE DO NOT CONSIDER THIS-*/
+  .boxservice svg {height: 6vw;}
+  body {background:#ccc;}
+  #boxes {padding-top: 0px;}
+
+
+  /* CSS */
+  .button {
+    background-color: #FFFFFF;
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    padding: .75rem;
+    margin: .5rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button:hover {
+    background-color: rgb(249,250,251);
+  }
+  
+  .button:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  
+  .button:focus-visible {
+    box-shadow: none;
+  }
